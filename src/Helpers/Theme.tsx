@@ -88,6 +88,7 @@ const palette = {
   "color-basic-900": "#1A2138",
   "color-basic-1000": "#151A30",
   "color-basic-1100": "#101426",
+  "color-gray-500":   "#949494",
   "color-basic-transparent-100": "rgba(143, 155, 179, 0.08)",
   "color-basic-transparent-200": "rgba(143, 155, 179, 0.16)",
   "color-basic-transparent-300": "rgba(143, 155, 179, 0.24)",
@@ -108,12 +109,14 @@ export const theme = createTheme({
   colors: {
     background: palette["color-basic-200"],
     border: palette["color-basic-900"],
+    headerText: palette['color-gray-500'],
     text: palette["color-basic-800"],
     cardTitles: palette["color-basic-200"],
     primary: palette["color-primary-500"],
     warning: palette["color-warning-500"],
     danger: palette["color-danger-500"],
-    white: "#FF0000"
+    transparent: palette['transparent'],
+    white: palette['color-basic-100'],
   },
   spacing: {
     s: 8,
@@ -134,6 +137,24 @@ export const theme = createTheme({
       fontSize: 48,
       fontFamily: "SF-Bold",
       color: "text",
+    },
+    headerTitle:{
+      fontSize: 16,
+      fontFamily: "SF-Light"
+    },
+    headerLocation:{
+      fontSize: 16,
+      fontFamily: "SF-Bold",
+      color: "text"
+    },
+    topCategories:{
+      fontSize: 16,
+      fontFamily: "SF-Bold",
+      color: "text"
+    },
+    filterText: {
+      fontSize: 14,
+      fontFamily: "SF-Semibold"
     },
     text:{
       fontSize: 24,

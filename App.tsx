@@ -15,6 +15,7 @@ const fonts = {
   "SF-Semibold": require("#/fonts/SF-Pro-Display-Semibold.otf"),
   "SF-Medium": require("#/fonts/SF-Pro-Display-Medium.otf"),
   "SF-Regular": require("#/fonts/SF-Pro-Display-Regular.otf"),
+  "SF-Light": require("#/fonts/SF-Pro-Display-Light.otf"),
 };
 
 const AppStack = createStackNavigator<StackRoutes>();

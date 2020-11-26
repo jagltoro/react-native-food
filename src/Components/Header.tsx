@@ -12,6 +12,7 @@ interface HeaderProps {
     onPress: () => void
   },
   title: string;
+  location: string;
   color: keyof Theme["colors"];
   backgroundColor: keyof Theme["colors"];
   right: {
@@ -22,12 +23,13 @@ interface HeaderProps {
   }
 }
 
-const Header = ({left, right, title, color, backgroundColor}: HeaderProps) => {
+const Header = ({left, right, title, location, color, backgroundColor}: HeaderProps) => {
   const insets = useSafeAreaInsets();
   return (
     <Box
       justifyContent={"space-between"}
-      paddingHorizontal={"m"}
+      alignItems="center"
+      paddingHorizontal={"s"}
       flexDirection={"row"}
       style={{paddingTop: insets.top}}
       {...{backgroundColor}}
@@ -40,12 +42,19 @@ const Header = ({left, right, title, color, backgroundColor}: HeaderProps) => {
         size={44}
         iconRatio={0.5}
       />
-      <Text
-        paddingTop={"s"}
-        variant={"text"}
-        color={color}>
-        {title.toUpperCase()}
-      </Text>
+      <Box justifyContent="center" alignItems="center">
+        <Text
+          paddingTop={"s"}
+          variant={"headerTitle"}
+          color={color}>
+          {title}
+        </Text>
+        <Text
+          variant={"headerLocation"}
+          color={color}>
+          {location}
+        </Text>
+      </Box>
       <RoundedIconButton
         name={right.icon}
         color={right.color}
